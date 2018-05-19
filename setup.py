@@ -4,30 +4,30 @@
 ### Do not forget to adjust the following variables to your own plugin.
 
 # The plugin's identifier, has to be unique
-plugin_identifier = "helloworld"
+plugin_identifier = "resumeprint"
 
 # The plugin's python package, should be "octoprint_<plugin identifier>", has to be unique
-plugin_package = "octoprint_helloworld"
+plugin_package = "octoprint_resumeprint"
 
 # The plugin's human readable name. Can be overwritten within OctoPrint's internal data via __plugin_name__ in the
 # plugin module
-plugin_name = "OctoPrint-Helloworld"
+plugin_name = "OctoPrint-ResumePrint"
 
 # The plugin's version. Can be overwritten within OctoPrint's internal data via __plugin_version__ in the plugin module
 plugin_version = "1.0.0"
 
 # The plugin's description. Can be overwritten within OctoPrint's internal data via __plugin_description__ in the plugin
 # module
-plugin_description = """A quick "Hello World" example plugin for OctoPrint"""
+plugin_description = """Octoprint plugin "Resume Print" allows to pause, stop and resume any print job, even in case of errors"""
 
 # The plugin's author. Can be overwritten within OctoPrint's internal data via __plugin_author__ in the plugin module
-plugin_author = "mbserran"
+plugin_author = "Javier Serrano"
 
 # The plugin's author's mail address.
 plugin_author_email = "mbserran@gmail.com"
 
 # The plugin's homepage URL. Can be overwritten within OctoPrint's internal data via __plugin_url__ in the plugin module
-plugin_url = "https://github.com/mbserran/OctoPrint-Helloworld"
+plugin_url = "https://github.com/mbserran/OctoPrint-ResumePrint"
 
 # The plugin's license. Can be overwritten within OctoPrint's internal data via __plugin_license__ in the plugin module
 plugin_license = "AGPLv3"

@@ -1,4 +1,4 @@
 include README.md
-recursive-include octoprint_helloworld/templates *
-recursive-include octoprint_helloworld/translations *
-recursive-include octoprint_helloworld/static *
+recursive-include octoprint_resumeprint/templates *
+recursive-include octoprint_resumeprint/translations *
+recursive-include octoprint_resumeprint/static *
