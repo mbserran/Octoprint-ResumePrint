@@ -3,7 +3,7 @@ from __future__ import absolute_import
 
 import octoprint.plugin
 
-class HelloWorldPlugin(octoprint.plugin.StartupPlugin,
+class ResumePrintPlugin(octoprint.plugin.StartupPlugin,
 		       octoprint.plugin.TemplatePlugin,
 		       octoprint.plugin.SettingsPlugin,
 		       octoprint.plugin.AssetPlugin):
@@ -21,9 +21,9 @@ class HelloWorldPlugin(octoprint.plugin.StartupPlugin,
 	]
 
     def get_assets(self):
-	return dict(js=["js/helloworld.js"],
-		    css=["css/helloworld.css"],
-		    less=["less/helloworld.less"])
+	return dict(js=["js/resumeprint.js"],
+		    css=["css/resumeprint.css"],
+		    less=["less/resumeprint.less"])
 
-__plugin_name__ = "Hello World"
-__plugin_implementation__ = HelloWorldPlugin()
+__plugin_name__ = "Resume Print"
+__plugin_implementation__ = ResumePrintPlugin()
