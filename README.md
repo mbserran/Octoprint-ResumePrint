@@ -7,7 +7,7 @@ This plugin allows the user to pause and/or stop any job print and then resume i
 Install via the bundled [Plugin Manager](https://github.com/foosel/OctoPrint/wiki/Plugin:-Plugin-Manager)
 or manually using this URL:
 
-    https://github.com/mbserran/OctoPrint-ResumePrint/archive/master.zip
+    https://github.com/mbserran/OctoPrint-ResumePrint/archive/v1.0.0.zip
 
 **TODO:** Describe how to install your plugin, if more needs to be done than just installing it via pip or through
 the plugin manager.
