@@ -25,5 +25,23 @@ class ResumePrintPlugin(octoprint.plugin.StartupPlugin,
 		    css=["css/resumeprint.css"],
 		    less=["less/resumeprint.less"])
 
+##~~ Softwareupdate hook
+
+    def get_update_information(self):
+	return dict(resumeprint=dict(
+		    displayName="ResumePrint Plugin",
+		    displayVersion=self._plugin_version,
+
+		    # version check: github repository
+		    type="github_release",
+		    user="mbserran",
+		    repo="OctoPrint-ResumePrint",
+		    current=self._plugin_version,
+
+		    # update method: pip
+		    pip="https://github.com/OctoPrint/OctoPrint-ResumePrint/archive/{target_version}.zip"
+		    )
+    	       )
+
 __plugin_name__ = "Resume Print"
 __plugin_implementation__ = ResumePrintPlugin()
