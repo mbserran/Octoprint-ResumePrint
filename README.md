@@ -2,7 +2,9 @@
 
 This plugin allows the user to pause and/or stop any job print and then resume it from the same point in which the job was stopped. It is a useful way to manage any failure situation where the print job gets suddenly stopped, as it avoids to spoil it by enabling to resume without any impact.
 
-![screenshot](ResumePrint_Navbar.png) ![screenshot](ResumePrint_Tab.png)
+Navbar menu: ![screenshot](ResumePrint_Navbar.png) 
+
+Tab menu: ![screenshot](ResumePrint_Tab.png)
 
 ## Setup
 
