@@ -31,7 +31,7 @@ or manually using this URL:
 ## Support My Efforts
 I programmed this plugin for fun and do my best effort to support those that have issues with it, please return the favor and support me.
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/mbserran)
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/EcoTaxiAranjuez)
 
 [1.0.4]: https://github.com/mbserran/OctoPrint-ResumePrint/tree/1.0.4
 [1.0.3]: https://github.com/mbserran/OctoPrint-ResumePrint/tree/1.0.3
