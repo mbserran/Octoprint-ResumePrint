@@ -9,18 +9,31 @@ class ResumePrintPlugin(octoprint.plugin.StartupPlugin,
 		       octoprint.plugin.SettingsPlugin,
 		       octoprint.plugin.AssetPlugin):
 
+    def __init__(self):
+	# Events definition here (better for intellisense in IDE)
+	# referenced in the settings too.
+	self.position = {
+			"res_x" : 0,
+			"res_y" : 0,
+			"res_z" : 0,
+			"res_e" : 0,
+			"res_t" : 0,
+			"res_f" : 0
+	}
+    
     def on_after_startup(self):
-        self._logger.info("Hello World! (more: %s)" % self._settings.get(["url"]))
+    	self._logger.info("Hello World! (more: %s)" % self._settings.get(["url"]))
 
     def get_settings_defaults(self):
 	return dict(url="https://en.wikipedia.org/wiki/Hello_world",
-		    position=dict(res_x=octoprint.events.PositionUpdate.x,
-				  res_y=octoprint.events.PositionUpdate.y,
-				  res_z=octoprint.events.PositionUpdate.z,
-				  res_e=octoprint.events.PositionUpdate.e,
-				  res_t=octoprint.events.PositionUpdate.t,
-				  res_f=octoprint.events.PositionUpdate.f
-				 )
+		    position = {
+			    	"res_x" : octoprint.events.PositionUpdate.x,
+				"res_y" : octoprint.events.PositionUpdate.y,
+				"res_z" : octoprint.events.PositionUpdate.z,
+				"res_e" : octoprint.events.PositionUpdate.e,
+				"res_t" : octoprint.events.PositionUpdate.t,
+				"res_f" : octoprint.events.PositionUpdate.f
+		    }
 		   )
 
     def get_template_configs(self):
