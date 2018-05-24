@@ -9,28 +9,28 @@
 </form>
 
 <h3>{{ _('Position settings') }}</h3>
-<form class="form-horizontal" data-bind="foreach: {data:Object.keys(octoprint.settings.defaults) }">
-    <div class="octorant_message" data-bind="visible: $parent.octoprint.settings.defaults[$data].name">
+<form class="form-horizontal" data-bind="foreach: {data:Object.keys(settings.plugins.resumeprint.position) }">
+    <div class="octorant_message" data-bind="visible: $parent.settings.plugins.resumeprint.position[$data].name">
         <h4>
-            <input type="checkbox" class="" data-bind="checked: $parent.octoprint.settings.defaults[$data].enabled"/>
-            <span data-bind="text: $parent.octoprint.settings.defaults[$data].name"></span>
+            <input type="checkbox" class="" data-bind="checked: $parent.settings.plugins.resumeprint.position[$data].enabled"/>
+            <span data-bind="text: $parent.settings.plugins.resumeprint.position[$data].name"></span>
         </h4>
         <div class="control-group">
             <label class="control-label">{{ _("Message") }}</label>
             <div class="controls">
-                <input type="text" class="input-block-level" data-bind="value: $parent.octoprint.settings.defaults[$data].message"/>
+                <input type="text" class="input-block-level" data-bind="value: $parent.settings.plugins.resumeprint.position[$data].message"/>
             </div>
         </div>
         <div class="control-group">
             <label class="control-label">{{ _("Include snapshot") }}</label>
             <div class="controls">
-                <input type="checkbox" data-bind="checked: $parent.octoprint.settings.defaults[$data].with_snapshot"/>
+                <input type="checkbox" data-bind="checked: $parent.settings.plugins.resumeprint.position[$data].with_snapshot"/>
             </div>
         </div>
-        <div class="control-group" data-bind="if: $parent.settings.plugins.octorant.events[$data].step">
+        <div class="control-group" data-bind="if: $parent.settings.plugins.resumeprint.position[$data].step">
             <label class="control-label">{{ _("Notify every") }}</label>
             <div class="controls">
-                <input type="number" min="1" max="100" step="1" data-bind="value: $parent.octoprint.settings.defaults[$data].step"/>%
+                <input type="number" min="1" max="100" step="1" data-bind="value: $parent.settings.plugins.resumeprint.position[$data].step"/>%
             </div>
         </div>
     </div>
