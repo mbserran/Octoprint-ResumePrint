@@ -20,7 +20,8 @@ class ResumePrintPlugin(octoprint.plugin.StartupPlugin,
 				  res_z=octoprint.events.PositionUpdate.z,
 				  res_e=octoprint.events.PositionUpdate.e,
 				  res_t=octoprint.events.PositionUpdate.t,
-				  res_f=octoprint.events.PositionUpdate.f)
+				  res_f=octoprint.events.PositionUpdate.f
+				 )
 		   )
 
     def get_template_configs(self):
