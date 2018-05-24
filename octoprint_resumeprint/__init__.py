@@ -7,8 +7,7 @@ import octoprint.events
 class ResumePrintPlugin(octoprint.plugin.StartupPlugin,
 		       octoprint.plugin.TemplatePlugin,
 		       octoprint.plugin.SettingsPlugin,
-		       octoprint.plugin.AssetPlugin,
-		       octoprint.events.PositionUpdate):
+		       octoprint.plugin.AssetPlugin):
 
     def on_after_startup(self):
         self._logger.info("Hello World! (more: %s)" % self._settings.get(["url"]))
