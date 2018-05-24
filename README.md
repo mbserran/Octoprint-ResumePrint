@@ -19,6 +19,9 @@ or manually using this URL:
 
 ## Changelog
 
+### [V1.0.5] - 2018-05-24
+- Version prepared for Octoprint update. Not functional. Adjusting settings information
+
 ### [V1.0.4] - 2018-05-20
 - Version prepared for Octoprint update. Not functional.
 
@@ -33,6 +36,7 @@ I programmed this plugin for fun and do my best effort to support those that hav
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/EcoTaxiAranjuez)
 
+[V1.0.5]: https://github.com/mbserran/OctoPrint-ResumePrint/tree/V1.0.5
 [V1.0.4]: https://github.com/mbserran/OctoPrint-ResumePrint/tree/V1.0.4
 [V1.0.3]: https://github.com/mbserran/OctoPrint-ResumePrint/tree/V1.0.3
 [V1.0.1]: https://github.com/mbserran/OctoPrint-ResumePrint/tree/V1.0.1
