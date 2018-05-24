@@ -13,12 +13,48 @@ class ResumePrintPlugin(octoprint.plugin.StartupPlugin,
 	# Events definition here (better for intellisense in IDE)
 	# referenced in the settings too.
 	self.position = {
-			"res_x" : 0,
-			"res_y" : 0,
-			"res_z" : 0,
-			"res_e" : 0,
-			"res_t" : 0,
-			"res_f" : 0
+			"res_x" : {
+				"name" : "Position X",
+				"enabled" : True,
+				"with_snapshot" : False,
+				"message": "This is the X position",
+				"value" : 0
+			},
+			"res_y" : {
+				"name" : "Position Y",
+				"enabled" : True,
+				"with_snapshot" : False,
+				"message": "This is the Y position",
+				"value" : 0
+			},
+			"res_z" : {
+				"name" : "Position Z",
+				"enabled" : True,
+				"with_snapshot" : False,
+				"message": "This is the Y position",
+				"value" : 0
+			},
+			"res_e" : {
+				"name" : "Extruder value",
+				"enabled" : True,
+				"with_snapshot" : False,
+				"message": "This is the E value",
+				"value" : 0
+			},
+			"res_t" : {
+				"name" : "Trip value",
+				"enabled" : True,
+				"with_snapshot" : False,
+				"message": "This is the T value",
+				"value" : 0
+			},
+			"res_f" : {
+				"name" : "Flow value",
+				"enabled" : True,
+				"with_snapshot" : False,
+				"message": "This is the F value",
+				"value" : 0
+			}
 	}
     
     def on_after_startup(self):
@@ -27,12 +63,48 @@ class ResumePrintPlugin(octoprint.plugin.StartupPlugin,
     def get_settings_defaults(self):
 	return dict(url="https://en.wikipedia.org/wiki/Hello_world",
 		    position = {
-			    	"res_x" : octoprint.events.PositionUpdate.x,
-				"res_y" : octoprint.events.PositionUpdate.y,
-				"res_z" : octoprint.events.PositionUpdate.z,
-				"res_e" : octoprint.events.PositionUpdate.e,
-				"res_t" : octoprint.events.PositionUpdate.t,
-				"res_f" : octoprint.events.PositionUpdate.f
+			    	"res_x" : {
+					"name" : "Position X",
+					"enabled" : True,
+					"with_snapshot" : False,
+					"message": "This is the X position",
+					"value" : octoprint.events.PositionUpdate.x
+				},
+				"res_y" : {
+					"name" : "Position Y",
+					"enabled" : True,
+					"with_snapshot" : False,
+					"message": "This is the Y position",
+					"value" : octoprint.events.PositionUpdate.y
+				},
+				"res_z" : {
+					"name" : "Position Z",
+					"enabled" : True,
+					"with_snapshot" : False,
+					"message": "This is the Y position",
+					"value" : octoprint.events.PositionUpdate.z
+				},
+				"res_e" : {
+					"name" : "Extruder value",
+					"enabled" : True,
+					"with_snapshot" : False,
+					"message": "This is the E value",
+					"value" : octoprint.events.PositionUpdate.e
+				},
+				"res_t" : {
+					"name" : "Trip value",
+					"enabled" : True,
+					"with_snapshot" : False,
+					"message": "This is the T value",
+					"value" : octoprint.events.PositionUpdate.t
+				},
+				"res_f" : {
+					"name" : "Flow value",
+					"enabled" : True,
+					"with_snapshot" : False,
+					"message": "This is the F value",
+					"value" : octoprint.events.PositionUpdate.f
+				}
 		    }
 		   )
 
