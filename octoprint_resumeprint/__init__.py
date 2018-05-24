@@ -2,6 +2,7 @@
 from __future__ import absolute_import
 
 import octoprint.plugin
+import octoprint.events
 
 class ResumePrintPlugin(octoprint.plugin.StartupPlugin,
 		       octoprint.plugin.TemplatePlugin,
@@ -12,7 +13,13 @@ class ResumePrintPlugin(octoprint.plugin.StartupPlugin,
         self._logger.info("Hello World! (more: %s)" % self._settings.get(["url"]))
 
     def get_settings_defaults(self):
-	return dict(url="https://en.wikipedia.org/wiki/Hello_world")
+	return dict(url="https://en.wikipedia.org/wiki/Hello_world",
+		    res_x=octoprint.events.PositionUpdate.x,
+		    res_y=octoprint.events.PositionUpdate.y,
+		    res_z=octoprint.events.PositionUpdate.z,
+		    res_e=octoprint.events.PositionUpdate.e,
+		    res_t=octoprint.events.PositionUpdate.t,
+		    res_f=octoprint.events.PositionUpdate.f)
 
     def get_template_configs(self):
 	return [
@@ -54,5 +61,6 @@ def __plugin_load__():
 
 	global __plugin_hooks__
 	__plugin_hooks__ = {
-		"octoprint.plugin.softwareupdate.check_config": __plugin_implementation__.get_update_information
+		"octoprint.plugin.softwareupdate.check_config": __plugin_implementation__.get_update_information,
+		"octoprint.settings.defaults": __plugin_implementation__.get_settings_defaults
 	}
