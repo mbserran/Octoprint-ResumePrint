@@ -42,7 +42,7 @@ class ResumePrintPlugin(octoprint.plugin.StartupPlugin,
 			current=self._plugin_version,
 
 			# update method: pip
-			pip="https://github.com/OctoPrint/OctoPrint-ResumePrint/archive/{target_version}.zip"
+			pip="https://github.com/mbserran/OctoPrint-ResumePrint/archive/{target_version}.zip"
 		)
     	)
 
