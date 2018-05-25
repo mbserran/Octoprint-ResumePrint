@@ -7,9 +7,13 @@ import octoprint.events
 class ResumePrintPlugin(octoprint.plugin.StartupPlugin,
 		       octoprint.plugin.TemplatePlugin,
 		       octoprint.plugin.SettingsPlugin,
-		       octoprint.plugin.AssetPlugin):
+		       octoprint.plugin.AssetPlugin,
+		       octoprint.events.PositionUpdate):
 
     def __init__(self):
+	# Initialize the events 
+	self.event.enabled = True
+	
 	# Events definition here (better for intellisense in IDE)
 	# referenced in the settings too.
 	self.position = {
@@ -68,42 +72,42 @@ class ResumePrintPlugin(octoprint.plugin.StartupPlugin,
 					"enabled" : True,
 					"with_snapshot" : False,
 					"message": "This is the X position",
-					"value" : octoprint.events.PositionUpdate.x
+					"value" : self.event.PositionUpdate.x
 				},
 				"res_y" : {
 					"name" : "Position Y",
 					"enabled" : True,
 					"with_snapshot" : False,
 					"message": "This is the Y position",
-					"value" : octoprint.events.PositionUpdate.y
+					"value" : self.event.PositionUpdate.y
 				},
 				"res_z" : {
 					"name" : "Position Z",
 					"enabled" : True,
 					"with_snapshot" : False,
 					"message": "This is the Y position",
-					"value" : octoprint.events.PositionUpdate.z
+					"value" : self.event.PositionUpdate.z
 				},
 				"res_e" : {
 					"name" : "Extruder value",
 					"enabled" : True,
 					"with_snapshot" : False,
 					"message": "This is the E value",
-					"value" : octoprint.events.PositionUpdate.e
+					"value" : self.event.PositionUpdate.e
 				},
 				"res_t" : {
 					"name" : "Trip value",
 					"enabled" : True,
 					"with_snapshot" : False,
 					"message": "This is the T value",
-					"value" : octoprint.events.PositionUpdate.t
+					"value" : self.event.PositionUpdate.t
 				},
 				"res_f" : {
 					"name" : "Flow value",
 					"enabled" : True,
 					"with_snapshot" : False,
 					"message": "This is the F value",
-					"value" : octoprint.events.PositionUpdate.f
+					"value" : self.event.PositionUpdate.f
 				}
 		    }
 		   )
